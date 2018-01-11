@@ -7,6 +7,7 @@ Mongolia_pop_data
 str(Mongolia_pop_data)
 
 Mongolia_pop_data$Population_Thousand <- round(Mongolia_pop_data$Population/1000,1)
+library(ggplot2)
 chart1 <- ggplot(Mongolia_pop_data, aes(x=Year, y= Population_Thousand, fill = Age_group)) + geom_area()
 chart2 <- ggplot(Mongolia_pop_data, aes(x=Year, y= Population_Thousand, fill = Age_group)) + geom_area(colour="black", size=.2, alpha=.4)
 chart3 <- ggplot(Mongolia_pop_data, aes(x=Year, y= Population_Thousand, fill = Age_group)) + geom_area(colour="black", size=.2, alpha=.4) + scale_fill_brewer(palette="Blues")
